@@ -10,13 +10,11 @@ public:
 	{
 		_size = 0;
 		maxSize = SIZE;
-		data = new T[maxSize];
-		_begin = data;
-		_end = data;
+		_begin = new T[maxSize];
 	}
 	~Iterator()
 	{
-		delete[] data;
+		delete[] _begin;
 		_size = 0;
 	}
 
@@ -34,21 +32,17 @@ public:
 	}
 	T* end()
 	{
-		return _end;
+		return _begin + _size;
 	}
 
 	void push_back(T lhs)
 	{				
-		data[_size] = lhs;
+		_begin[_size] = lhs;
 		++_size;
 
 		if (_size >= maxSize)
 		{
 			resize();
-		}
-		else
-		{
-			_end = data + _size;
 		}
 	}
 
@@ -57,22 +51,17 @@ private:
 	{
 		maxSize *= 2;
 		T* tData = new T[maxSize];
-		for (int i = 0; i < _size; ++i)
+		for (size_t i = 0; i < _size; ++i)
 		{
-			tData[i] = data[i];
+			tData[i] = _begin[i];
 		}
 
-		delete[] data;
-		data = tData;
+		delete[] _begin;
 		_begin = tData;
-		_end = data + _size;
 	}
 
 private:
-	T* data;
-	T* curr;
 	T* _begin;
-	T* _end;
-	int _size;
-	int maxSize;
+	size_t _size;
+	size_t maxSize;
 };
