@@ -1,6 +1,7 @@
 #include "Iterator.h"
 #include <iostream>
 #include <string>
+#include <iterator>
 
 struct mVal
 {
@@ -18,7 +19,7 @@ std::ostream& operator<<(std::ostream& os, const mVal& val)
 
 int main()
 {
-	Iterator<mVal*> list;
+	DynamicArray<mVal*> list;
 	list.push_back(new mVal(1));
 	list.push_back(new mVal(2));
 	list.push_back(new mVal(3));
@@ -30,6 +31,11 @@ int main()
 	for (auto it = list.begin(); it != list.end(); ++it)
 	{
 		std::cout << **it;
+	}
+
+	for (auto it : list)
+	{
+		std::cout << *it;
 	}
 
 	for (auto it = list.begin(); it != list.end(); ++it)
