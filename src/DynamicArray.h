@@ -18,7 +18,7 @@ public:
 		delete[] _begin;
 		_begin = lhs._begin;
 		_size = lhs._size;
-		_maxSize = lhs._maxSize;	
+		_maxSize = lhs._maxSize;
 	}
 	~DynamicArray()
 	{
@@ -40,7 +40,7 @@ public:
 	}
 
 	bool operator==(const DynamicArray& lhs) const
-	{		
+	{
 		if (lhs._size != _size)
 		{
 			return false;
@@ -83,7 +83,7 @@ public:
 	}
 
 	void push_back(T lhs)
-	{				
+	{
 		_begin[_size] = lhs;
 		++_size;
 

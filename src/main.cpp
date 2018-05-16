@@ -1,7 +1,6 @@
-#include "Iterator.h"
+#include "DynamicArray.h"
 #include <iostream>
 #include <string>
-#include <iterator>
 
 struct mVal
 {
