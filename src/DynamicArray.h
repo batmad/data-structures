@@ -65,7 +65,7 @@ public:
 		return *_begin;
 	}
 
-	int size()
+	size_t size()
 	{
 		return _size;
 	}

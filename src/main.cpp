@@ -1,4 +1,4 @@
-#include "DynamicArray.h"
+#include "LinkedList.h"
 #include <iostream>
 #include <string>
 
@@ -18,7 +18,7 @@ std::ostream& operator<<(std::ostream& os, const mVal& val)
 
 int main()
 {
-	DynamicArray<mVal*> list;
+	LinkedList<mVal*> list;
 	list.push_back(new mVal(1));
 	list.push_back(new mVal(2));
 	list.push_back(new mVal(3));
