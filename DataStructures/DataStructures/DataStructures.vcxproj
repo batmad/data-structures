@@ -113,6 +113,7 @@
     <ClCompile Include="..\..\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\BinarySearchTree.h" />
     <ClInclude Include="..\..\src\DynamicArray.h" />
     <ClInclude Include="..\..\src\Heap.h" />
     <ClInclude Include="..\..\src\LinkedList.h" />

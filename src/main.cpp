@@ -1,4 +1,4 @@
-#include "Heap.h"
+#include "BinarySearchTree.h"
 #include <iostream>
 #include <string>
 
@@ -41,7 +41,7 @@ std::ostream& operator<<(std::ostream& os, const mVal& val)
 
 int main()
 {
-	Heap<int> list;
+	BinarySearchTree<int> list;
 	list.insert(1);
 	list.insert(2);
 	list.insert(3);
@@ -50,9 +50,6 @@ int main()
 	list.insert(6);
 	list.insert(7);
 	list.insert(8);
-
-	list.pop();
-
-
+	
 	return 0;
 }
