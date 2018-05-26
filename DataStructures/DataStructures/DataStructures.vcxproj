@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\DynamicArray.h" />
+    <ClInclude Include="..\..\src\Heap.h" />
     <ClInclude Include="..\..\src\LinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
